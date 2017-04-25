@@ -14,6 +14,7 @@
 			username-parameter="username" password-parameter="password"
 			default-target-url="/pages/index.jsp" always-use-default-target="false" />
 		-->
+		<!-- 使用默认提供的认证页面 -->
 		<security:http-basic/>
 		<security:intercept-url pattern="/**" access="ROLE_USER" />
 	</security:http>

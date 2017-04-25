@@ -9,8 +9,15 @@ package cn.plk.web.exception;
  * //TODO 添加类/接口功能描述
  * @author {康培亮/AB052634}
  */
-public class ViewAccessException extends AbstractBussinessException {
+public class ViewAccessException extends RuntimeException {
 
     private static final long serialVersionUID = 1L;
+    
+    public ViewAccessException() {
+    }
+    
+    public ViewAccessException(String msg) {
+    	super(msg);
+    }
 
 }

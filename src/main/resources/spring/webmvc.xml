@@ -11,6 +11,8 @@
 
 	<!-- 自动搜索标注的类 -->
 	<context:component-scan base-package="cn.plk.web.controller" />
+	<context:component-scan base-package="cn.plk.web.service" />
+	<context:component-scan base-package="cn.plk.web.dao" />
 	
 	<!-- 启用注解，使用注解匹配URL的映射以及数据绑定注解等机制 -->
 	<mvc:annotation-driven />
@@ -38,4 +40,11 @@
 		<property name="suffix" value=".jsp" />
 		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
 	</bean>
+	
+	<!-- 配置MultipartResolver 用于文件上传 -->  
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">  
+		<property name="defaultEncoding" value="UTF-8"/>
+		<property name="maxUploadSize" value="5400000"/>
+		<property name="uploadTempDir" value="fileUpload/temp"/>
+	</bean>  
 </beans>

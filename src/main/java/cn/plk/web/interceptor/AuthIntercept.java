@@ -19,9 +19,6 @@ public class AuthIntercept implements HandlerInterceptor {
     
     private boolean verify;
     
-    /**
-     * @see HandlerInterceptor#preHandle(HttpServletRequest, HttpServletResponse, Object)
-     **/
     @Override
     public boolean preHandle(HttpServletRequest req, HttpServletResponse res, Object obj) throws Exception {
         if (verify) {
@@ -30,9 +27,6 @@ public class AuthIntercept implements HandlerInterceptor {
         return true;
     }
     
-    /**
-     * @see HandlerInterceptor#postHandle(HttpServletRequest, HttpServletResponse, Object, ModelAndView)
-     **/
     @Override
     public void postHandle(HttpServletRequest req, HttpServletResponse res, Object obj, ModelAndView view) throws Exception {
         if (null != view) {
@@ -40,9 +34,6 @@ public class AuthIntercept implements HandlerInterceptor {
         }
     }
 
-    /**
-     * @see HandlerInterceptor#afterCompletion(HttpServletRequest, HttpServletResponse, Object, Exception)
-     **/
     @Override
     public void afterCompletion(HttpServletRequest req, HttpServletResponse res, Object obj, Exception e) throws Exception {
         

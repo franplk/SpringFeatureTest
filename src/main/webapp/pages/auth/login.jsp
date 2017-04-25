@@ -1,12 +1,15 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
 
+<% String path = request.getContextPath(); %>
+
 <html>
 <head>
 <title>首页</title>
+<base href="<%=path%>/"/>
 </head>
 
 <body>
-<form action="login.do" method="post">
+<form action="auth/login" method="post">
 	<table>
 		<tr>
 			<td>用户名：</td>

@@ -11,8 +11,8 @@
 	<import resource="classpath:spring/jdbc.xml"/>
 	<import resource="classpath:spring/cache/ehcache.xml"/>
 	<import resource="classpath:spring/event.xml"/>
-	-->
 	<import resource="classpath:spring/security.xml"/>
+	-->
 	<!-- Exception Deploy -->
 	<!-- <bean id="exceptionResolver" class="cn.plk.web.exception.SpringExceptionResolver"></bean> -->
 </beans>
