@@ -11,8 +11,6 @@
 
 	<!-- 自动搜索标注的类 -->
 	<context:component-scan base-package="cn.plk.web.controller" />
-	<context:component-scan base-package="cn.plk.web.service" />
-	<context:component-scan base-package="cn.plk.web.dao" />
 	
 	<!-- 启用注解，使用注解匹配URL的映射以及数据绑定注解等机制 -->
 	<mvc:annotation-driven />

@@ -10,7 +10,7 @@
 	<!-- 引用Druid连接池配置 -->
 	<import resource="classpath:dbpool/druid.xml"/>
 	
-	<context:component-scan base-package="plk.tst" />
+	<context:component-scan base-package="cn.plk.web.dao" />
 	
 	<!-- 事务管理 -->
 	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
